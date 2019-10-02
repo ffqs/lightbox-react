@@ -574,7 +574,6 @@ class ReactImageLightbox extends Component {
    */
   handleOuterMousewheel(event) {
     // Prevent scrolling of the background
-    event.preventDefault();
     event.stopPropagation();
 
     const xThreshold = WHEEL_MOVE_X_THRESHOLD;
@@ -621,7 +620,6 @@ class ReactImageLightbox extends Component {
   }
 
   handleImageMouseWheel(event) {
-    event.preventDefault();
     const yThreshold = WHEEL_MOVE_Y_THRESHOLD;
 
     if (Math.abs(event.deltaY) >= Math.abs(event.deltaX)) {
@@ -1030,15 +1028,6 @@ class ReactImageLightbox extends Component {
 
     if (!this.caption) {
       return;
-    }
-
-    const { height } = this.caption.getBoundingClientRect();
-    const { scrollHeight, scrollTop } = this.caption;
-    if (
-      (event.deltaY > 0 && height + scrollTop >= scrollHeight) ||
-      (event.deltaY < 0 && scrollTop <= 0)
-    ) {
-      event.preventDefault();
     }
   }
 
