@@ -2,8 +2,8 @@ import * as React from 'react';
 
 export interface ILightBoxProps {
     mainSrc: string;
-    nextSrc?: string;
-    prevSrc?: string;
+    nextSrc?: string | JSX.Element;
+    prevSrc?: string | JSX.Element;
     mainSrcThumbnail?: string;
     prevSrcThumbnail?: string;
     nextSrcThumbnail?: string;

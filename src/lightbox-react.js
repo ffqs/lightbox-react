@@ -1027,6 +1027,7 @@ class ReactImageLightbox extends Component {
     event.stopPropagation();
 
     if (!this.caption) {
+      // eslint-disable-next-line no-useless-return
       return;
     }
   }
